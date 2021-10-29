@@ -8,6 +8,7 @@ const findTalkerById = require('./controllers/findTalkerById');
 const editTalker = require('./controllers/editTalker');
 const deleteTalker = require('./controllers/deleteTalker');
 const searchTalkerByName = require('./controllers/searchTalkerByName');
+const returnToken = require('./controllers/returnToken');
 const {
   checkName,
   checkAge,
@@ -31,7 +32,7 @@ app.get('/talker/:id', findTalkerById);
 
 app.get('/talker', registeredTalkers);
 
-app.post('/login', loginValidation);
+app.post('/login', loginValidation, returnToken);
 
 app.post(
   '/talker',
