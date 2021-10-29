@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const registeredTalkers = require('./controllers/registeredTalkers');
-const loginValidation = require('./controllers/loginValidation');
+const loginValidation = require('./middlewares/loginValidation');
 const newTalker = require('./controllers/newTalker');
 const findTalkerById = require('./controllers/findTalkerById');
 const editTalker = require('./controllers/editTalker');
@@ -14,7 +14,7 @@ const {
   checkTalkDetails,
   checkTalk,
   authToken,
-} = require('./controllers/talkerValidation');
+} = require('./middlewares/talkerValidation');
 
 const app = express();
 app.use(bodyParser.json());
