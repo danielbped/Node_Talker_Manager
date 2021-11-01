@@ -31,7 +31,7 @@ const checkAge = (req, res, next) => {
 const checkTalkDetails = (req, res, next) => {
   const { talk: { rate, watchedAt } } = req.body;
   const validRate = (/^[1-5]/).test(rate);
-  const validDate = (/[\d]{2}\/[\d]{2}\/[\d]{4}/).test(watchedAt);
+  const validDate = (/^(\d{2}\/){2}\d{4}$/g).test(watchedAt);
 
   if (!validRate) return res.status(400).json({ message: errorMessages.rateField });
   if (!validDate || !watchedAt) {
