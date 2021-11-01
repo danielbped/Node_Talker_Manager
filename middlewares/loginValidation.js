@@ -7,7 +7,7 @@ const errorMessages = {
 
 const loginValidation = (req, res, next) => {
   const { email, password } = req.body;
-  const emailRegex = /.+@+.+mail\.com/g;
+  const emailRegex = /\S+@\w+\.\w{2,6}(\.\w{2})?/g;
   const passwordRegex = /^.{6}/g;
   const validEmail = emailRegex.test(email);
   const validPassword = passwordRegex.test(password);

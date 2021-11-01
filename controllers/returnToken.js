@@ -1,6 +1,6 @@
 const HTTP_OK_STATUS = 200;
 
-const tokenGenerator = (_req, res) => {
+const tokenGenerator = () => {
   const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'.split('');
   const token = [];
   for (let i = 0; i < 16; i += 1) {
