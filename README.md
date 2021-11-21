@@ -1,6 +1,6 @@
 # Projeto [Talker Manager](https://github.com/tryber/sd-012-project-talker-manager/pull/57)
   - Módulo 3: Desenvolvimento Back-end
-  - Bloco 26: Introdução ao desenvolvimento Web com NodeJS
+  - Bloco 25: Introdução ao desenvolvimento Web com NodeJS
 ### Requisitos
 - [x] 1 - Crie o endpoint GET /talker
 - [x] 2 - Crie o endpoint GET /talker/:id
